@@ -65,7 +65,8 @@ This project was built to demonstrate my full-stack engineering skills while cre
 ### Deployment
 
 - Vercel (frontend)
-- Render (backend and database)
+- Render (backend)
+- Supabase (database)
 
 <details>
 
@@ -175,7 +176,8 @@ The frontend is built as a **React** single-page application using **Vite** for 
 ### Deployment
 
 - The frontend is deployed on **Vercel**
-- The backend and database are deployed on **Render**.
+- The backend is deployed on **Render**
+- The database is deployed on **Supabase**
 
 ## Dependencies
 
