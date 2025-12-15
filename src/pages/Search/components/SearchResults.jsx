@@ -20,13 +20,13 @@ export default function SearchResults({ list }) {
     <div className={styles.searchResults}>
       {list?.length ? (
         list.map((pattern) => (
-          <div className={styles.pattern} key={pattern.id}>
+          <div className={styles.pattern} key={pattern}>
             <PatternCard
-              patternID={pattern.id}
+              patternID={pattern}
               thumbnailOptions={thumbnailOptions}
             />
             <div className={styles.dropdown}>
-              <Dropdown patternID={pattern.id} />
+              <Dropdown patternID={pattern} />
             </div>
           </div>
         ))

@@ -39,15 +39,16 @@ export default function Search() {
 
     async function fetchResults() {
       try {
-        const params = mapObject(refineOptions);
-        userInput && params.push(`query=${userInput}`);
+        const params = userInput
+          ? [...mapObject(refineOptions), `query=${userInput}`]
+          : mapObject(refineOptions);
+
         const query = new URLSearchParams(params.join("&"));
 
         const response = await axiosPrivate.get(`/patterns/refine/?${query}`, {
           signal: controller.signal,
         });
-
-        isMounted && setSearchResults(response?.data);
+        isMounted && setSearchResults(response?.data?.patternIDs);
       } catch (error) {
         console.log(error);
       }
