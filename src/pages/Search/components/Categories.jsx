@@ -29,18 +29,17 @@ export default function Categories({ handleChange }) {
     };
   }, [axiosPrivate]);
 
-  function mapCategories(categories) {
-    return categories?.map((categoryObj) => {
-      categoryObj.value = categoryObj?.permalink;
-      categoryObj.label = categoryObj?.name;
+  function sortCategories(categories) {
+    const transformCategories = (cat) => {
+      const node = { value: cat.permalink, label: cat.name };
+      const children = cat.children.map((child) => transformCategories(child));
 
-      if (categoryObj?.children?.length) {
-        mapCategories(categoryObj.children);
-      } else {
-        delete categoryObj.children;
+      if (children.length > 0) {
+        node.children = children;
       }
-      return categoryObj;
-    });
+      return node;
+    };
+    return categories.map(transformCategories);
   }
 
   return (
@@ -48,7 +47,7 @@ export default function Categories({ handleChange }) {
       <h4>Categories</h4>
       {categories && (
         <Checkbox
-          node={mapCategories(categories)}
+          node={sortCategories(categories)}
           value="pc"
           handleChange={handleChange}
           expandAll={true}
