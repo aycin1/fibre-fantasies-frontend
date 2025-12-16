@@ -68,6 +68,8 @@ This project was built to demonstrate my full-stack engineering skills while cre
 - Render (backend)
 - Supabase (database)
 
+---
+
 <details>
 
 <summary><h2>Usage</h2></summary>
@@ -130,6 +132,8 @@ Clicking the username of another user will redirect you to their profile.
 ![Profile of another user](images/profile-diff-user.png)
 
 </details>
+
+---
 
 ## Running Locally
 
