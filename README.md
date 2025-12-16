@@ -198,7 +198,6 @@ The frontend is built as a **React** single-page application using **Vite** for 
 ### Performance & UX
 
 - Pagination for pattern search
-- Lazy loading of images
 
 ### Enhancements
 
