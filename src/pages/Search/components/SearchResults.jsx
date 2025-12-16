@@ -14,6 +14,7 @@ export default function SearchResults({ list }) {
       padding: "10px",
     },
     maxHeight: "200px",
+    placeholderStyle: { width: 200, height: 200 },
   };
 
   return (

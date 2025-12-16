@@ -9,6 +9,7 @@ export default function PatternSelect({ chosenPattern, handleClick }) {
     urlSize: "small_url",
     style: { width: "80px", height: "auto" },
     maxHeight: "80px",
+    placeholderStyle: { width: 80, height: 80 },
   };
 
   function displayPattern(pattern) {

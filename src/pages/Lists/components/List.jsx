@@ -20,6 +20,7 @@ export default function List({ listTitle }) {
       overflow: "hidden",
     },
     maxHeight: "120px",
+    placeholderStyle: { width: 120, height: 120 },
   };
 
   return (

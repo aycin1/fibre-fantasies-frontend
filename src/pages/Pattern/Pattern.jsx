@@ -18,6 +18,7 @@ export default function Pattern() {
       minWidth: "450px",
     },
     maxHeight: "800px",
+    placeholderStyle: { width: 450, height: 450 },
   };
 
   return (

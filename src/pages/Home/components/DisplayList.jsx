@@ -14,6 +14,7 @@ export default function DisplayList({ chosenList }) {
       overflow: "hidden",
     },
     maxHeight: "150px",
+    placeholderStyle: { width: 150, height: 150 },
   };
 
   const chosenListContents =

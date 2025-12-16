@@ -25,6 +25,7 @@ export default function Post({ post }) {
       maxWidth: "70px",
     },
     maxHeight: "70px",
+    placeholderStyle: { width: 70, height: 70 },
   };
 
   return (
