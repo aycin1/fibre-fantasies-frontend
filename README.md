@@ -144,7 +144,7 @@ Clicking the username of another user will redirect you to their profile.
    cd fibre-fantasies-frontend
 ```
 
-2. Install dependencies
+2. Install dependencies:
 
 ```bash
    npm install
