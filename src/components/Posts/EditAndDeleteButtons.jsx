@@ -36,12 +36,12 @@ export default function EditAndDeleteButtons({
     }
   }
 
-  async function handleDeletion() {
+  async function handleDeletion(e) {
+    e.preventDefault();
     const data = { post_id: postID };
     try {
       const response = await axiosPrivate.delete("/feed/", { data });
       handleChange(response?.data?.message);
-      console.log(response?.data);
       if (response.status === 200 && persist === true) {
         window.parent.location = window.parent.location.href;
       }
