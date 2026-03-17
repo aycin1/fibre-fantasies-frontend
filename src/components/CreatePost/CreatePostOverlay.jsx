@@ -41,7 +41,7 @@ export default function CreatePostOverlay({ openClick, closeClick }) {
       setMessage(response?.data?.message);
 
       if (response.status === 201 && persist === true)
-        window.parent.location = window.parent.location.reload();
+        window.parent.location = window.parent.location.href;
     } catch (error) {
       console.log(error);
     }
